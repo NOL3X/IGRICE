@@ -1,0 +1,89 @@
+header, footer {
+    min-width: 1140px;
+}
+#kontis{
+    min-height: 700px;
+    min-width: 1140px;
+}
+#container1,
+#tabla {
+    display: flex;
+    width: 940px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 10px;
+}
+#izvuceni_brojevi,
+#izabrani_brojevi,
+.row {
+    display: flex;
+    margin: 0px 10px;
+}
+.brojevi,
+.izvuceni_brojevi,
+.izabrani_brojevi,
+.tekst,
+.nevidljivi {
+    background-color: red;
+    font-size: 30px;
+    text-align: center;
+    margin: 5px;
+    border: 3px solid white;
+    border-radius: 28px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px black;
+    font-family: Arial;
+    width: 56px;
+    height: 56px;
+    line-height: 50px;
+}
+.izabrani_brojevi,
+.izvuceni_brojevi {
+    margin: -3px;
+}
+.tekst {
+    width: 446px;
+    margin: 5px 15px;
+}
+/* --- ANIMACIJE --- */
+#izvlacenje, #biranje{
+    position: absolute;
+    animation: izvla 1.2s ease-in-out infinite;
+}
+@keyframes izvla {
+50% { background: blue;   transform: scale(1.03);}
+}
+@keyframes proba {
+    0% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+}
+@keyframes proba1 {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+@keyframes proba2 {
+    100% {
+        background-color: red;
+    }
+}
+@keyframes proba3 {
+    100% {
+        background-color: blue;
+    }
+}
+@keyframes opis {
+    0% { width: 0px; height: 0px;} 
+    50% { width: 300px; height: 0px;}     
+    100% { width: 300px; height: 215px;}     
+}

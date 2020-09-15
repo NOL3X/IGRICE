@@ -1,0 +1,267 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background: url("../img/back1.jpg");
+    font-family: cursive;
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 100px;
+}
+/* --- HEADER --- */
+header, footer{
+    width: 100%;
+    min-width: 790px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    background-color: black;
+}
+#naslov{
+    width: 400px;
+    font-size: 30px;
+    line-height: 70px;
+    text-align: center;
+    color: tomato;
+}
+#prazan{
+  width: calc(20vw);
+}
+#dugmici{
+    width: 240px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 15px;
+}
+#header a{
+    text-decoration: none;
+}
+#nav{
+    display: flex;
+}
+#nav div{
+    background-color: tomato;
+    border: 2px solid white;
+    text-align: center;
+}
+#nav div:hover{
+    background-color: #AA1D28;
+}
+#pocetna, #liste{
+    border: 2px solid white;
+}
+.dugme{
+    color:white;
+    background-color: #AA1D28;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 7px;
+    font-size:15px;
+    font-weight: bold;
+}
+.dugme:hover{
+  background-color: tomato;
+}
+/* --- FOOTER --- */
+footer{
+    height: 100px;
+    position: absolute;
+    bottom: 0px;
+}
+.foot{
+     margin: 0px 25px;
+}
+.foot_tit{
+     width: 200px;
+     color: white;
+     padding:5px;
+}
+.foot_tex{
+   width: 200px;
+   color: gray;
+   font-size: 12px;
+   padding: 0px 5px;
+}
+span{
+   color:tomato;
+}
+/* --- MAIN --- */
+#kontis{
+    display: flex;
+    height: calc(100vh - 170px);
+    min-height: 520px;
+    min-width: 800px;
+}
+#container{
+    display: flex;
+    margin: auto;
+}
+#container a{
+    text-decoration: none;
+    color: white;
+}
+.games{
+    width: 310px;
+    height: 470px;
+    margin: 0px 15px;
+    position: relative;
+}
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 30px;
+}
+.front{
+    font-size: 57px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    padding: 150px 0px;
+    background: #AA1D28;
+}
+#multi_cover{
+    padding: 162px 0px;
+    font-size: 50px;
+}
+#single_player, #multi_player {
+    display: flex;
+    flex-wrap: wrap;
+}
+.single, .multi{
+    margin: 5px;
+    background: #AA1D28;
+    border-radius: 40px 15px;
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+.single, .multi, .games, .dugme{
+    transform: scale(1);
+    transition: transform .2s;
+    cursor: pointer;
+}
+.games:hover, .single:hover, .multi:hover, .dugme:hover {
+    transform: scale(0.97);
+    transition: transform .2s;
+}
+.single{
+    width: 300px;
+    height: 147px;
+}
+.multi{
+    width: 300px;
+    height: 225px;
+}
+.obrisi{
+    display: none;
+}
+.m_img img{
+    width:100%;
+    height: 170px;
+    border-radius: 40px 15px 0px 0px;
+}
+.m_txt{
+    font-size: 30px;
+    margin: 5px;
+}
+.s_img img{
+    width:100%;
+    height: 110px;
+    border-radius: 40px 15px 0px 0px;
+}
+.s_txt{
+    font-size: 20px;
+    margin: 3px;
+}
+/* REGISTRACIJA I LOGOVANJE */
+#log_cont{
+    position: absolute;
+    top: 70;
+    right: 0;
+}
+.logovanje, .registracija {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 250px;
+    border-radius: 30px;
+    font-weight: bold;
+    color: white;
+    text-align:center;
+    background: #AA1D28;
+    padding: 13px 20px 5px;
+}
+.form-group{
+    width: 210px;
+}
+.btn {
+    margin: 5px 5px;
+}
+.greska {
+    color: yellow;
+    margin: 7px 3px;
+}
+#ulog{
+    background: none;
+    transform: none;
+    color: tomato;
+}
+/* -----  OPIS IGRE  ----- */
+.opis, .opisigre, .iksic{
+    position: absolute;
+    opacity:0.92;
+    left: 10px;
+    font-size:15px;
+    font-weight: bold;
+    color:white;
+    border-radius: 11px;
+}
+.opis{
+    top: 80px;
+    background: #AA1D28;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.opisigre{
+    top: 123px;
+    background: tomato;
+    padding: 10px 20px;
+    text-align: justify;
+    z-index: 2;
+    animation: opis 2s ease-in-out forwards;
+}
+.iksic{
+    left: 273px;
+    top: 5px;
+    width: 22px;
+    height: 22px;
+    background: white;
+    border: 2px solid #AA1D28;
+    color: #AA1D28;
+    text-align: center;
+    line-height: 17px;
+    cursor: pointer;
+}
+h4{
+    font-weight: bold;
+    text-align: center;
+}
+.opistekst{
+    opacity: 0;
+    animation: opistekst 1s 1s linear forwards;
+}
+@keyframes opis {
+0% { width: 0px; height: 0px;} 
+50% { width: 300px; height: 0px;}     
+100% { width: 300px; height: 535px;}     
+}
+@keyframes opistekst {
+100% { opacity: 1;}
+}
+/* -----  KRAJ OPISA IGRE  ----- */

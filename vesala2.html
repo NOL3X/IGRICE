@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/vesala2.css">
+    <title>Vesala udvoje</title>
+</head>
+
+<body>
+     <!-- HEADER -->
+    <header id="header">
+        <div id="naslov">Novak Igre</div>
+        <a href="index.html">
+            <div id="pocetna" class='dugme'>Početna strana</div>
+        </a>
+        <div id="nav">
+            <a href="iksoks2.html">
+                <div id="iks2" class='dugme'>Iks-Oks - 2 igrača</div>
+            </a>
+        </div>
+        <div id='dugmici'>
+            <div id="reg" class='dugme'>Registruj se</div>
+            <div id="log" class='dugme'>Uloguj se</div>
+            <div id="ulog" class='obrisi'></div>
+            <div id="izlog" class='obrisi'>Izloguj se</div>
+        </div>
+    </header>
+     <!-- MAIN -->
+    <main>
+        <div class="opis">KRATAK OPIS IGRE</div>
+        <div class="opisi obrisi">
+            <div id="opistekst" class="obrisi">
+                    <h4>"VEŠALA" - 2 IGRAČA</h4>
+                - Jedan igrač zadaje skriveni pojam unosom reči preko prompt-a. <br>
+                - Kreće vremensko ograničenje i drugi igrač počinje sa igrom. <br>
+                - Slova se unose preko tastature u polje za unos i potvrđuju pritikom na Enter ili
+                klikom na dugme OK. Ukoliko je uneto slovo tačno ispisaće se na svim
+                poljima na kojima se nalazi u skrivenom pojmu. Ukoliko je netačno, slovo se 
+                ispisuje u malo polje ispod, a broj pokušaja se smanjuje za 1. <br>
+                - Ukoliko igrač klikne na dugme "POMOĆ", ispisaće mu se jedno
+                slovo skrinevog pojma (na svim mestima ukoliko ga ima na više) i broj pokušaja
+                će se smanjiti za 1. <br> - Igrač je pobedio ukoliko pogodi skriveni pojam. <br>
+                - Igrač je izgubio ukoliko pogreši 6 puta ili istekne vreme.
+                <div id="iksic" class="iksic">X</div>
+            </div>
+        </div>
+        <div id="por_poraz" class="obrisi">PORAZ ☹</div>
+        <div id="por_pobeda" class="obrisi">POBEDA!</div>
+        <div id="kontis">
+             <!-- IGRA -->
+            <div id="container2">
+                <div id="unesi">UNESI REČ</div>
+                <div id="omotac"></div>
+                <div id="pog">
+                    <input type="text" id="slovo" maxlength="1" disabled>
+                    <button type="submit" id="potvrda" disabled>OK</button>
+                </div>
+                <div id="promasaji"></div>
+                <div id="tajmer_cont">
+                    <div class="red">
+                        <p id="ostatak">PREOSTALO JE JOŠ</p>
+                    </div>
+                    <div class="red">
+                        <div class="blok">
+                            <div id="tajmer">60</div>
+                            <p>SEKUNDI</p>
+                        </div>
+                        <div class="blok">
+                            <div id="brojac">6</div>
+                            <p>POKUŠAJA</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="donji">
+                    <button id="pomoc" class="obrisi">POMOĆ</button>
+                    <div id="odustajem" class="obrisi">PREDAJEM SE</div>
+                </div>
+            </div>
+            <!-- FORME ZA LOGIN I REGISTRACIJU -->
+            <div id="log_cont">
+                <form id="login" class='obrisi' novalidate>
+                    <div class='greska' id='greska'> </div>
+                    <div class='form-group'>
+                        <label for="id_log"> Unesite korisničko ime: </label>
+                        <input id="id_log" type="text" name="id_log" maxlength="8" class='form-control'>
+                    </div>
+                    <div class='form-group'>
+                        <label for="id_pass"> Unesite lozinku: </label>
+                        <input id="id_pass" type="password" name="id_pass" maxlength="15" class='form-control'>
+                    </div>
+                    <div class='form-group text-center'>
+                        <input value="Potvrdi" type="submit" class='btn btn-default btn-md' id="potvrdi_log">
+                        <input value="Odustani" type="reset" class='btn btn-default btn-md' id="reset_log">
+                    </div>
+                </form>
+                <form id="regis" class='obrisi' novalidate>
+                    <div class='greska' id='greska1'> </div>
+                    <div class='form-group'>
+                        <label for="name_reg"> Unesite Vaše ime: </label>
+                        <input id="name_reg" type="text" name="name_reg" maxlength="15" class='form-control'>
+                    </div>
+                    <div class='form-group'>
+                        <label for="email"> Unesite Vaš e-mail: </label>
+                        <input id="email" type="email" name="email" placeholder="neko@gmail.com" class='form-control'>
+                    </div>
+                    <div class='form-group'>
+                        <label for="id_reg"> Unesite korisničko ime: </label>
+                        <input id="id_reg" type="text" name="id_reg" maxlength="8" class='form-control'>
+                    </div>
+                    <div class='form-group'>
+                        <label for="reg_pass"> Unesite lozinku: </label>
+                        <input id="reg_pass" type="password" name="reg_pass" maxlength="15" class='form-control'>
+                    </div>
+                    <div class='form-group text-center'>
+                        <input value="Potvrdi" type="submit" class='btn btn-default btn-md' id="potvrdi_reg">
+                        <input value="Odustani" type="reset" class='btn btn-default btn-md' id="reset_reg">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+     <!-- FOOTER -->
+    <footer>
+        <div class="foot">
+            <div class="foot_tit"></div>
+            <div class="foot_tex"><span>>> </span></div>
+        </div>
+        <div class="foot">
+            <div class="foot_tit"></div>
+            <div class="foot_tex"> <span></span></div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/vesala2.js"></script>
+</body>
+
+</html>

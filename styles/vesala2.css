@@ -1,0 +1,167 @@
+header, footer {
+    min-width: 1000px;
+}
+#kontis{
+    min-height: 620px;
+    min-width: 1000px;
+}
+#container2 {
+    border: 2px solid white;
+    padding: 25px 30px 15px;
+    margin:auto;
+    background: #AA1D28;
+    opacity: 0.9;
+    border-radius: 30px;
+}
+.polje,
+#potvrda,
+#slovo,
+#brojac,
+.polje1{
+    width: 50px;
+    height: 50px;
+    background: white;
+    margin: 5px;
+    font-size: 30px;
+    line-height: 50px;
+    text-align: center;
+    font-weight: bold;
+    color: #AA1D28;
+}
+#potvrda{
+    width: 80px;
+    border-radius: 15px;
+    line-height: 30px;
+    padding: 5px 15px;
+}
+#potvrda, #slovo{
+    background: white;
+    margin: 20px 20px 5px;
+}
+.polje1 {
+    width: 30px;
+    height: 30px;
+    margin: 15px 5px 8px;
+    font-size: 20px;
+    line-height: 30px;
+}
+#pog, #novaigra, #tajmer, #pokusaj, #unesi, p {
+    display: block;
+    margin: auto;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
+#novaigra, .predaja{
+    background: tomato;
+    text-align: center;
+    border-radius: 15px;
+    width: 260px;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 7px 20px;
+    margin-bottom: 5px;
+}
+.predaja:hover{
+    border: 2px solid #AA1D28;
+    padding: 5px 18px;
+    background: white;
+    color: #AA1D28;
+}
+#pog,
+#omotac,
+#promasaji {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#brojac {
+    display: block;
+    margin:  auto;
+    width: 100px;
+    height: 100px;
+    font-size: 60px;
+    line-height: 100px;
+    border-radius: 15px;
+}
+#tajmer_cont{
+    display: flex;
+    width:450px;
+    margin: auto;
+    flex-direction: column;
+}
+.red{
+    display: flex;
+    justify-content: space-around;
+}
+#ostatak{
+    margin: 0px 12px 3px 0px;
+}
+.red p{
+    margin-top: 3px;
+}
+#tajmer, #unesi{
+    cursor: pointer;
+    background:tomato;
+    padding: 7px 15px;
+    border-radius: 15px;
+}
+#unesi{
+    width: 210px;
+}
+#tajmer{
+    cursor: default;
+    width: 110px;
+    font-size: 60px;
+}
+#donji{
+    display:flex;
+    width: 530px;
+    margin: auto;
+    justify-content: space-between;
+    color: white;
+}
+#pomoc{
+    width: 150px;
+    margin-left:40px;
+    border:none;
+}
+#pomoc:disabled{
+    background: silver;
+    color:#AA1D28;
+}
+.blok{
+    margin: 0px 67px;
+}
+/* --- POBEDA - PORAZ --- */
+.pp{
+    position: absolute;
+    z-index: 3;
+    top: 300px;
+    left: 50%;
+    margin-left: -220px;
+    width: 440px;
+    background: tomato;
+    border: 5px solid white;
+    border-radius: 50px;
+    font-size:80px;
+    text-align: center;
+    color: white;
+    animation: pp 5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes pp {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    40%,60%{
+        transform: scale(2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.1);
+        opacity: 0;
+    }
+}

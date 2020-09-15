@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/memorija.css">
+    <title>Memorija</title>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header id="header">
+        <div id="naslov">Novak Igre</div>
+        <a href="index.html">
+            <div id="pocetna" class='dugme'>Početna strana</div>
+        </a>
+        <a href="liste.html">
+            <div id="liste" class='dugme'>Rang liste</div>
+        </a>
+        <div id="nav">
+            <a href="loto.html">
+                <div id="loto" class='dugme'>Loto 7/39</div>
+            </a>
+            <a href="vesala1.html">
+                <div id="ves" class='dugme'>Vešala</div>
+            </a>
+        </div>
+        <div id='dugmici'>
+            <div id="reg" class='dugme'>Registruj se</div>
+            <div id="log" class='dugme'>Uloguj se</div>
+            <div id="ulog" class='obrisi'></div>
+            <div id="izlog" class='obrisi'>Izloguj se</div>
+        </div>
+    </header>
+    <!-- MAIN -->
+    <main>
+        <div class="opis">KRATAK OPIS IGRE</div>
+        <div class="opisi obrisi">
+            <div id="opistekst" class="obrisi">
+                <h4>IGRA "MEMORIJA"</h4>
+                - Iza " ? " nalaze se skrivene slike (12 parova po 2 iste slike).<br> - Klikom na bilo koji " ? " otkriva se slika iza njega. <br> - Najvise 2 slike mogu biti prikazane u isto vreme. Ukoliko su iste, nestaće, u suprotnom, ponovo će se
+                okrenuti na " ? ".<br> - Cilj igre je pronaći svih 12 parova pre isteka vremena.<br> - Ukoliko uspete - pobedili ste, u suprotnom - izgubili ste.
+                <div id="iksic" class="iksic">X</div>
+            </div>
+        </div>
+        <div id="kontis">
+            <!-- IGRA -->
+            <div id="container">
+                <div id="tajmer">90</div>
+                <div id="igra_memorija"> </div>
+            </div>
+            <!-- FORME ZA LOGIN I REGISTRACIJU -->
+            <div id="log_cont">
+                <form id="login" class='obrisi' novalidate>
+                    <div class='greska' id='greska'> </div>
+                    <div class='form-group'>
+                        <label for="id_log"> Unesite korisničko ime: </label>
+                        <input id="id_log" type="text" name="id_log" maxlength="8" class='form-control'>
+                    </div>
+                    <div class='form-group'>
+                        <label for="id_pass"> Unesite lozinku: </label>
+                        <input id="id_pass" type="password" name="id_pass" maxlength="15" class='form-control'>
+                    </div>
+                    <div class='form-group text-center'>
+                        <input value="Potvrdi" type="submit" class='btn btn-default btn-md' id="potvrdi_log">
+                        <input value="Odustani" type="reset" class='btn btn-default btn-md' id="reset_log">
+                    </div>
+                </form>
+                <form id="regis" class='obrisi' novalidate>
+                    <div class='greska' id='greska1'> </div>
+                    <div class='form-group'>
+                        <label for="name_reg"> Unesite Vaše ime: </label>
+                        <input id="name_reg" type="text" name="name_reg" maxlength="15" class='form-control'>
+                    </div>
+                    <div class='form-group'>
+                        <label for="email"> Unesite Vaš e-mail: </label>
+                        <input id="email" type="email" name="email" placeholder="neko@gmail.com" class='form-control'>
+                    </div>
+                    <div class='form-group'>
+                        <label for="id_reg"> Unesite korisničko ime: </label>
+                        <input id="id_reg" type="text" name="id_reg" maxlength="8" class='form-control'>
+                    </div>
+                    <div class='form-group'>
+                        <label for="reg_pass"> Unesite lozinku: </label>
+                        <input id="reg_pass" type="password" name="reg_pass" maxlength="15" class='form-control'>
+                    </div>
+                    <div class='form-group text-center'>
+                        <input value="Potvrdi" type="submit" class='btn btn-default btn-md' id="potvrdi_reg">
+                        <input value="Odustani" type="reset" class='btn btn-default btn-md' id="reset_reg">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <!-- FOOTER -->
+    <footer>
+
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/memorija.js"></script>
+</body>
+
+</html>

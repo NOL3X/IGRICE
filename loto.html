@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/loto.css">
+    <title>Loto</title>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header id="header">
+        <div id="naslov">Novak Igre</div>
+        <a href="index.html">
+            <div id="pocetna" class='dugme'>Početna strana</div>
+        </a>
+        <a href="liste.html">
+            <div id="liste" class='dugme'>Rang liste</div>
+        </a>
+        <div id="nav">
+            <a href="vesala1.html">
+                <div id="ves" class='dugme'>Vešala</div>
+            </a>
+            <a href="memorija.html">
+                <div id="mem" class='dugme'>Memorija</div>
+            </a>
+        </div>
+        <div id='dugmici'>
+            <div id="reg" class='dugme'>Registruj se</div>
+            <div id="log" class='dugme'>Uloguj se</div>
+            <div id="ulog" class='obrisi'></div>
+            <div id="izlog" class='obrisi'>Izloguj se</div>
+        </div>
+    </header>
+    <!-- MAIN -->
+    <main>
+        <div class="opis">KRATAK OPIS IGRE</div>
+        <div class="opisi obrisi">
+            <div id="opistekst" class="obrisi">
+                <h4>LOTO 7/39</h4>
+                - Popularna igra na sreću - Loto.<br>
+                - Igrač bira 7 od ponuđenih 39 brojeva. Zatim kreće nasumično izvlačenje takođe 7 brojeva.<br>
+                - Ukoliko igrač pogodi 4 ili više brojeva, osvojio je "nagradu". U suprotnom, "više sreće drugi put".
+                <div id="iksic" class="iksic">X</div>
+            </div>
+        </div>
+        <div id="kontis">
+            <!-- IGRA -->
+            <div id="container1">
+                <div id="logo"><img src="img/loto1.png" alt="loto"></div>
+                <div id="tabla"></div>
+                <div class="row">
+                    <div class="tekst" id="izvuceni">IZVUČENI BROJEVI </div>
+                    <div class="obrisi" id="izvlacenje">IZVLAČENJE BROJEVA</div>
+                    <div class="tekst"> NAGRADNI FOND:</div>
+                </div>
+                <div class="row">
+                    <div id="izvuceni_brojevi"> </div>
+                    <div class="tekst" id="fond"></div>
+                </div>
+                <div class="row">
+                    <div class="tekst">IZABRANI BROJEVI</div>
+                    <div class="tekst" id="biranje">IZABERITE BROJEVE</div>
+                    <div class="tekst"> DOBITAK ZA 7 POGODAKA</div>
+                </div>
+                <div class="row">
+                    <div id="izabrani_brojevi"></div>
+                    <div class="tekst" id="sedmica"></div>
+                </div>
+            </div>
+            <!-- FORME ZA LOGIN I REGISTRACIJU -->
+            <div id="log_cont">
+                <form id="login" class='obrisi' novalidate>
+                    <div class='greska' id='greska'> </div>
+                    <div class='form-group'>
+                        <label for="id_log"> Unesite korisničko ime: </label>
+                        <input id="id_log" type="text" name="id_log" maxlength="8" class='form-control'>
+                    </div>
+                    <div class='form-group'>
+                        <label for="id_pass"> Unesite lozinku: </label>
+                        <input id="id_pass" type="password" name="id_pass" maxlength="15" class='form-control'>
+                    </div>
+                    <div class='form-group text-center'>
+                        <input value="Potvrdi" type="submit" class='btn btn-default btn-md' id="potvrdi_log">
+                        <input value="Odustani" type="reset" class='btn btn-default btn-md' id="reset_log">
+                    </div>
+                </form>
+                <form id="regis" class='obrisi' novalidate>
+                    <div class='greska' id='greska1'> </div>
+                    <div class='form-group'>
+                        <label for="name_reg"> Unesite Vaše ime: </label>
+                        <input id="name_reg" type="text" name="name_reg" maxlength="15" class='form-control'>
+                    </div>
+                    <div class='form-group'>
+                        <label for="email"> Unesite Vaš e-mail: </label>
+                        <input id="email" type="email" name="email" placeholder="neko@gmail.com" class='form-control'>
+                    </div>
+                    <div class='form-group'>
+                        <label for="id_reg"> Unesite korisničko ime: </label>
+                        <input id="id_reg" type="text" name="id_reg" maxlength="8" class='form-control'>
+                    </div>
+                    <div class='form-group'>
+                        <label for="reg_pass"> Unesite lozinku: </label>
+                        <input id="reg_pass" type="password" name="reg_pass" maxlength="15" class='form-control'>
+                    </div>
+                    <div class='form-group text-center'>
+                        <input value="Potvrdi" type="submit" class='btn btn-default btn-md' id="potvrdi_reg">
+                        <input value="Odustani" type="reset" class='btn btn-default btn-md' id="reset_reg">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <!-- FOOTER -->
+    <footer>
+        <div class="foot">
+            <div class="foot_tit"></div>
+            <div class="foot_tex"><span>>> </span></div>
+        </div>
+        <div class="foot">
+            <div class="foot_tit"></div>
+            <div class="foot_tex"> <span></span></div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/loto.js"></script>
+</body>
+
+</html>

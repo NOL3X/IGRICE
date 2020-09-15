@@ -1,0 +1,78 @@
+header, footer {
+    min-width: 1150px;
+}
+#kontis{
+    min-width: 1150px;
+}
+/* --- IZBOR POJMOVA --- */
+#pojmovi{
+    display:flex;
+    justify-content: space-evenly;
+}
+#izbor {
+    position: relative;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+}
+.pojam, .izbor {
+    color: #AA1D28;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    background:white;
+    padding: 7px 15px;
+    border-radius: 15px;
+    font-weight: bold;
+}
+.pojam:hover {
+    border: 2px solid #AA1D28;
+    padding: 5px 13px;
+    background: tomato;
+    color: white;
+}
+.izbor {
+    position: absolute;
+    background: tomato;
+    color: white;
+    cursor: default;
+}
+/* --- SLOVA --- */
+#omotac_slova {
+    display:flex;
+    flex-wrap: wrap;
+    width:550px;
+    margin: 12px auto 0px;
+}
+.azbuka {
+    width:40px;
+    height:40px;
+    font-size: 30px;
+    background: tomato;
+    color:white;
+    border: 0px;
+    border-radius: 5px;
+    margin: 5px;
+}
+.azbuka:hover {
+    background: #AA1D28;
+    border: 2px solid white;
+    font-size:26px;
+}
+.azbuka:disabled {
+    width:34px;
+    height:34px;
+    background: silver;
+    color:#AA1D28;
+    font-size:24px;
+    border:0px;
+    margin: 8px;
+}
+
+@keyframes opis {
+    0% { width: 0px; height: 0px;} 
+    50% { width: 300px; height: 0px;}     
+    100% { width: 300px; height: 515px;}     
+}
+
+

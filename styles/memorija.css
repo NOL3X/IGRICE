@@ -1,0 +1,70 @@
+header, footer {
+  min-width: 1140px;
+}
+#kontis{
+  min-height: 600px;
+  min-width: 1140px;
+}
+#container{
+  position: relative;
+}
+.okvir {
+  width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.karta {
+  position: relative;
+  transition: all .4s linear;
+  transform-style: preserve-3d;
+  margin: 5px;
+}
+.karta,
+.karta_nazad,
+.karta_napred {
+  height: 120px;
+  width: 120px;
+}
+.karta_nazad,
+.karta_napred {
+  position: absolute;
+  backface-visibility: hidden;
+  top: 0;
+  left: 0;
+}
+.karta_napred {
+  background: url('../img/upitnik.png');
+}
+.karta_nazad {
+  transform: rotateY(180deg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.izabrana {
+ transform: rotateY(180deg);
+}
+.pogodak .karta_napred {
+background: transparent;
+}
+#tajmer{
+width:110px;
+height: 110px;
+font-size: 60px;
+line-height: 80px;
+font-weight: bold;
+color: white;
+text-align: center;
+background:#FAB942;
+padding: 15px;
+border-radius: 55px;
+position: absolute;
+left: -150px;
+top: 210px;
+}
+@keyframes opis {
+  0% { width: 0px; height: 0px;} 
+  50% { width: 300px; height: 0px;}     
+  100% { width: 300px; height: 325px;}     
+}
